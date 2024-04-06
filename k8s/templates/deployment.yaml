@@ -1,0 +1,31 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: hw6-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: hw6
+  template:
+    metadata:
+      labels:
+        app: hw6
+    spec:
+      containers:
+        - name: hw6
+          image: dmitriyburets1982/hw6:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8000         
+          readinessProbe:
+            httpGet:
+              path: /health
+              port: 8080
+            initialDelaySeconds: 5
+          livenessProbe:
+            httpGet:
+              path: /health
+              port: 8080
+            initialDelaySeconds: 5
+      restartPolicy: Always
