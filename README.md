@@ -2,4 +2,4 @@ heml install hw6 k8s
 newman run HW6.postman_collection
 heml uninstall hw6
 
-Результаты выполнения приложены в файлах newman_1.png и newman_2.png
+Р РµР·СѓР»СЊС‚Р°С‚С‹ РІС‹РїРѕР»РЅРµРЅРёСЏ РїСЂРёР»РѕР¶РµРЅС‹ РІ С„Р°Р№Р»Р°С… newman_1.png Рё newman_2.png
